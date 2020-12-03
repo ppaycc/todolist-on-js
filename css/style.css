@@ -1,0 +1,111 @@
+body{
+  background: #ccc;
+}
+.wrapper{
+  width: 800px;
+  margin: 100px auto;
+}
+h2{
+  text-align: center;
+}
+.container{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 10px;
+}
+.list{
+  background: white;
+  align-self: start;
+  padding: 20px;
+  border-radius: 10px;
+}
+ul{
+  margin-bottom: 0;
+}
+li{
+  padding: 5px;
+}
+li:hover{
+  cursor: pointer;
+}
+.rows{
+  align-self: start;
+}
+#textArea{
+  height: 100px;
+  width: 100%;
+  padding: 5px 10px;
+  resize: none;
+  border-radius: 10px;
+  border: none;
+}
+#button, #delButton{
+  margin-top: 5px;
+  width: 100%;
+}
+
+button{
+  background: #344cd1;
+  color: white;
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  transition: .2s;
+}
+button:hover{
+  background: #0e2295;
+}
+#textArea:focus, button:focus{
+  outline: none;
+}
+@media (max-width: 820px){
+  .wrapper{
+    max-width: 600px;
+  }
+  .container{
+    display: block;
+    padding: 20px;
+  }
+  .list{
+    margin-bottom: 10px;
+  }
+  .rows{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: "a a" "b c";
+  }
+  #textArea{
+    grid-area: a;
+  }
+  #button{
+    margin: 0;
+    grid-area: b;
+  }
+  #delButton{
+    margin: 0;
+    grid-area: c;
+  }
+}
+@media(max-width:620px){
+  .wrapper{
+    width: 500px;
+  }
+}
+@media(max-width:520px){
+  .wrapper{
+    width: 400px;
+  }
+}
+@media(max-width:420px){
+  .wrapper{
+    width: 300px;
+  }
+  .container{
+    padding: 10px;
+  }
+}
+@media(max-width:320px){
+  .wrapper{
+    width: 290px;
+  }
+}
